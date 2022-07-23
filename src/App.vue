@@ -13,10 +13,6 @@
       <v-btn icon to="/settings">
         <v-icon>mdi-cog</v-icon>
       </v-btn>
-      <!-- aboutのボタン -->
-      <v-btn icon to="/about">
-        <v-icon>mdi-food-takeout-box-outline</v-icon>
-      </v-btn>
     </v-app-bar>
     <!-- メインコンテンツ -->
     <v-main>
@@ -32,6 +28,7 @@
 
 <script>
 import { mapState } from "vuex";
+import '@mdi/font/css/materialdesignicons.css'
 
 export default {
   name: "App",
