@@ -13,6 +13,10 @@
       <v-btn icon to="/settings">
         <v-icon>mdi-cog</v-icon>
       </v-btn>
+      <!-- aboutのボタン -->
+      <v-btn icon to="/about">
+        <v-icon>mdi-food-takeout-box-outline</v-icon>
+      </v-btn>
     </v-app-bar>
     <!-- メインコンテンツ -->
     <v-main>
@@ -31,22 +35,22 @@ import { mapState } from "vuex";
 
 export default {
   name: "App",
- 
- data () {
+
+  data() {
     return {
-      snackbar: false
-    }
+      snackbar: false,
+    };
   },
 
- computed: mapState({
-    appName: state => state.settings.appName,
-    errorMessage: state => state.errorMessage
+  computed: mapState({
+    appName: (state) => state.settings.appName,
+    errorMessage: (state) => state.errorMessage,
   }),
 
   watch: {
-    errorMessage () {
-      this.snackbar = true
-    }
+    errorMessage() {
+      this.snackbar = true;
+    },
   },
   // Appインスタンス生成前に一度だけ実行されます
   beforeCreate() {
